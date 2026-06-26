@@ -1,6 +1,5 @@
 package stepdefinitions;
 
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
@@ -22,7 +21,7 @@ public class AddToCartSteps {
     @Then("The product should be successfully added.")
     public void theProductShouldBeSuccessfullyAdded() throws InterruptedException {
 
-        productsPage.getShoppingCart();
+        productsPage.openCart();
 
         String expectedProduct = "Sauce Labs Fleece Jacket";
         Assert.assertEquals(cartPage.getProductName(), expectedProduct);

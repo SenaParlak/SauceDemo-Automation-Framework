@@ -5,8 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.List;
-
 public class ProductsPage extends BasePage {
 
     @FindBy(css = ".title")
@@ -34,7 +32,7 @@ public class ProductsPage extends BasePage {
         String productId =productName.toLowerCase().replace(" ", "-");
         DriverManager.getDriver().findElement(By.id("add-to-cart-" + productId)).click();
     }
-    public void getShoppingCart(){
+    public void openCart(){
         shoppingCart.click();
     }
 }
