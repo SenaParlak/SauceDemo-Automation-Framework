@@ -28,4 +28,8 @@ public class LoginPage extends BasePage {
 
     }
 
+    public boolean loginPageDisplayed() {
+        return loginButton.isDisplayed();
+    }
+
 }
