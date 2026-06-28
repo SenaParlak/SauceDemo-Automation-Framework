@@ -13,14 +13,14 @@ public class CheckoutInformationSteps {
     private final OverviewPage overviewPage = new OverviewPage();
 
     @And("User enter checkout information with {string}, {string} and {string}")
-    public void userEnterCheckoutInformationWithAnd(String firstName, String lastName, String postalCode) throws InterruptedException {
+    public void userEnterCheckoutInformationWithAnd(String firstName, String lastName, String postalCode) {
 
         checkoutPage.enterCheckoutInformation(firstName, lastName, postalCode);
 
     }
 
     @Then("User should see the checkout overview page")
-    public void userShouldSeeTheCheckoutOverviewPage() throws InterruptedException {
+    public void userShouldSeeTheCheckoutOverviewPage() {
 
         Assert.assertEquals(overviewPage.getOverviewTitle(), "Checkout: Overview");
 
