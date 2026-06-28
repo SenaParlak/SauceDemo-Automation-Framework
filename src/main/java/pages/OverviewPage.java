@@ -13,10 +13,10 @@ public class OverviewPage extends BasePage{
     private WebElement finishButton;
 
     public String getOverviewTitle(){
-        return overviewTitle.getText();
+        return getText(overviewTitle);
     }
 
     public void clickFinishButton(){
-        finishButton.click();
+        click(finishButton);
     }
 }

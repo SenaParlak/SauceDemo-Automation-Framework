@@ -21,14 +21,14 @@ public class CheckoutPage extends BasePage {
     private WebElement continuebutton;
 
     public String getCheckoutTitle() {
-        return checkoutTitle.getText();
+        return getText(checkoutTitle);
     }
 
     public void enterCheckoutInformation(String firstName, String lastName, String postalCode) {
-        firstNameInput.sendKeys(firstName);
-        lastNameInput.sendKeys(lastName);
-        postalCodeInput.sendKeys(postalCode);
-        continuebutton.click();
+        type(firstNameInput, firstName);
+        type(lastNameInput, lastName);
+        type(postalCodeInput, postalCode);
+        click(continuebutton);
     }
 
 

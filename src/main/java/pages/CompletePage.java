@@ -12,10 +12,10 @@ public class CompletePage extends BasePage{
     private WebElement backToHome;
 
     public String getCompleteHeader(){
-        return completeHeader.getText();
+        return getText(completeHeader);
     }
 
     public void clickBackToHome(){
-        backToHome.click();
+        click(backToHome);
     }
 }

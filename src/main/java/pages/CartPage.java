@@ -20,7 +20,7 @@ public class CartPage extends BasePage {
 
 
     public String getProductName() {
-        return productName.getText();
+        return getText(productName);
     }
 
     public void removeProduct(String productName){
@@ -33,6 +33,6 @@ public class CartPage extends BasePage {
     }
 
     public void checkout(){
-        checkout.click();
+        click(checkout);
     }
 }

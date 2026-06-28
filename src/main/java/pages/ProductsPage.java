@@ -20,12 +20,12 @@ public class ProductsPage extends BasePage {
     private WebElement shoppingCart;
 
     public boolean isProductsTitleDisplayed() {
-        return productsTitle.isDisplayed();
+        return isDisplayed(productsTitle);
     }
 
     public void logout(){
-        burgerMenuButton.click();
-        logoutButton.click();
+        click(burgerMenuButton);
+        click(logoutButton);
     }
 
     public void addToCart(String productName){
@@ -33,6 +33,6 @@ public class ProductsPage extends BasePage {
         DriverManager.getDriver().findElement(By.id("add-to-cart-" + productId)).click();
     }
     public void openCart(){
-        shoppingCart.click();
+        click(shoppingCart);
     }
 }
