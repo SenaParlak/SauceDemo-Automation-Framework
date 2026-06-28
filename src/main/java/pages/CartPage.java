@@ -15,6 +15,9 @@ public class CartPage extends BasePage {
     @FindBy(css = ".cart_item")
     private List<WebElement> cartItems;
 
+    @FindBy(id = "checkout")
+    private WebElement checkout;
+
 
     public String getProductName() {
         return productName.getText();
@@ -27,5 +30,9 @@ public class CartPage extends BasePage {
 
     public boolean isCartEmpty(){
         return cartItems.isEmpty();
+    }
+
+    public void checkout(){
+        checkout.click();
     }
 }
