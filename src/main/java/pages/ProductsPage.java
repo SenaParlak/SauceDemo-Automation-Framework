@@ -4,6 +4,7 @@ import driver.DriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utilities.ElementUtils;
 
 public class ProductsPage extends BasePage {
 
@@ -29,7 +30,7 @@ public class ProductsPage extends BasePage {
     }
 
     public void addToCart(String productName){
-        String productId =productName.toLowerCase().replace(" ", "-");
+        String productId = ElementUtils.formatProductId(productName);
         DriverManager.getDriver().findElement(By.id("add-to-cart-" + productId)).click();
     }
     public void openCart(){

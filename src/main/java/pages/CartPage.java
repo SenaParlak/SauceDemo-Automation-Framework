@@ -4,6 +4,7 @@ import driver.DriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utilities.ElementUtils;
 
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class CartPage extends BasePage {
     }
 
     public void removeProduct(String productName){
-        String productId = productName.toLowerCase().replace(" ", "-");
+        String productId = ElementUtils.formatProductId(productName);
         DriverManager.getDriver().findElement(By.id("remove-" + productId)).click();
     }
 

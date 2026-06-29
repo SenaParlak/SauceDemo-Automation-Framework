@@ -20,6 +20,9 @@ public class CheckoutPage extends BasePage {
     @FindBy(id = "continue")
     private WebElement continuebutton;
 
+    @FindBy(css = "[data-test='error']")
+    private WebElement errorMessage;
+
     public String getCheckoutTitle() {
         return getText(checkoutTitle);
     }
@@ -29,6 +32,10 @@ public class CheckoutPage extends BasePage {
         type(lastNameInput, lastName);
         type(postalCodeInput, postalCode);
         click(continuebutton);
+    }
+
+    public String getErrorMessage() {
+        return getText(errorMessage);
     }
 
 
