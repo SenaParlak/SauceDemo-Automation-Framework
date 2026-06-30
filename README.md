@@ -31,14 +31,6 @@ This UI automation framework was developed using Java, Selenium WebDriver, Cucum
 * Checkout Completion
 * Back to Products
 
-## Future Improvements
-
-* Add Allure Report integration
-* Implement GitHub Actions for CI/CD
-* Add DataTable support for test data management
-* Improve explicit wait utilities
-* Enable parallel test execution
-
 ## Author
 
 **Mehpare Sena Parlak**
